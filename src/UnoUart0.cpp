@@ -32,6 +32,11 @@ void UnoUart0::print(const char* str) {
 	}
 }
 
-void receive(){
+char UnoUart0::receive(){
+	// Check if receive completed 
+	while(!(*UCSR0A & (1 << 7))) {
+		// Stalls until ready
+	}
 
+	return *UDR0;
 }

@@ -6,7 +6,10 @@ int main() {
 	UnoUart0 logger; 
 
 	while(true) {
-		logger.print("Hello from direct-address bare metal!\n");
+		char input = logger.receive();
+		logger.print("Received: ");
+		logger.transmit(input);
+		logger.print("\n");
 	}
 	return 0;
 }
