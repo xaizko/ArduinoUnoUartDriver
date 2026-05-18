@@ -40,3 +40,19 @@ char UnoUart0::receive(){
 
 	return *UDR0;
 }
+
+void UnoUart0::receiveString(char* buffer, uint16_t maxLength) {
+	uint16_t index = 0;
+
+	while (index < (maxLength - 1)) {
+		char c = receive();
+		if (c == 'r' || c == '\n') {
+			break;
+		}
+
+		buffer[index] = c;
+		index++;
+	}
+	
+	buffer[index] = '\0';
+}

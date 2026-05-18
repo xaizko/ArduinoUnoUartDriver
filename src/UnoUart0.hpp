@@ -9,6 +9,7 @@ class UnoUart0 {
 		void transmit(char c);
 		void print(const char* str);
 		char receive();
+		void receiveString(char* buffer, uint16_t maxLength);
 
 	private:
 		// NOTE:
