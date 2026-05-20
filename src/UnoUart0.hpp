@@ -21,7 +21,7 @@ class UnoUart0 {
 		inline static volatile uint8_t* const UCSR0A = reinterpret_cast<uint8_t*>(0xC0);
 		inline static volatile uint8_t* const UCSR0B = reinterpret_cast<uint8_t*>(0xC1);
 		inline static volatile uint8_t* const UCSR0C = reinterpret_cast<uint8_t*>(0xC2);
-		inline static volatile uint8_t* const UBBR0L = reinterpret_cast<uint8_t*>(0xC4);
-		inline static volatile uint8_t* const UBBR0H = reinterpret_cast<uint8_t*>(0xC5);
+		inline static volatile uint8_t* const UBRR0L = reinterpret_cast<uint8_t*>(0xC4);
+		inline static volatile uint8_t* const UBRR0H = reinterpret_cast<uint8_t*>(0xC5);
 		inline static volatile uint8_t* const UDR0 = reinterpret_cast<uint8_t*>(0xC6);
 };

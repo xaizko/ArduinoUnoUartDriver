@@ -5,8 +5,8 @@ UnoUart0::UnoUart0() {
 	// Grab the UBBR registers
 	// Ref: Page 621
 	uint16_t ubbr_val = (CLOCK_FREQUENCY / (16 * BAUDRATE)) - 1;
-	*UBBR0H = static_cast<uint8_t>(ubbr_val >> 8);
-	*UBBR0L = static_cast<uint8_t>(ubbr_val);
+	*UBRR0H = static_cast<uint8_t>(ubbr_val >> 8);
+	*UBRR0L = static_cast<uint8_t>(ubbr_val);
 
 	// Active RX and TX
 	// Ref: Page 202
