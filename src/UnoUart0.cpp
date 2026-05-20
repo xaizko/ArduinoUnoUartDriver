@@ -46,7 +46,7 @@ void UnoUart0::receiveString(char* buffer, uint16_t maxLength) {
 
 	while (index < (maxLength - 1)) {
 		char c = receive();
-		if (c == 'r' || c == '\n') {
+		if (c == '\r' || c == '\n') {
 			break;
 		}
 
